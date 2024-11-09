@@ -1,0 +1,48 @@
+/* Product.css */
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .product-title {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  
+  .product-title:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .card-title {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .card-text h3 {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .rating {
+    color: #ffc107;
+    font-size: 0.9rem;
+  }
+  
