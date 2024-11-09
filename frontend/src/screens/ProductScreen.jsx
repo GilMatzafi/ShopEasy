@@ -1,21 +1,24 @@
-import { useParams } from "react-router-dom"
-import products from "../products"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Button, Card } from "react-bootstrap";
 import Rating from "../components/Rating";
 import '../assets/styles/ProductScreen.css';
+import axios from "axios";
 
 
 const ProductScreen = () => {
 
+    const [product, setProduct] = useState({});
     const { id: productId } = useParams();
-    const product = products.find((p) => p.id === Number(productId)); // Convert productId to a number
 
-
-    if (!product) {
-        return <h2>Product Not Found</h2>;
-      }
-
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const { data } = await axios.get(`/api/products/${productId}`);
+            setProduct(data);
+        };
+        fetchProduct();
+    }   , [productId]);
 
     return (
         <>
@@ -25,21 +28,24 @@ const ProductScreen = () => {
     
           <Row>
             <Col md={5}>
+              {product && product.image && (
                 <Image src={product.image} alt={product.name} fluid />
+              )}
             </Col>
     
             <Col md={4}>
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  <h3>{product.name}</h3>
+                  <h3 className="product-title">{product.name}</h3>
                 </ListGroup.Item>
-                <ListGroup.Item>
-                  <Rating value={product.rating} text={`${product.numReviews} reviews`} />
+                <ListGroup.Item className="rating-section">
+                  <Rating value={product.rating} />
+                  <span className="review-count">{product.numReviews} reviews</span>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="price-section">
                   Price: ${product.price}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="description-section">
                   Description: {product.description}
                 </ListGroup.Item>
               </ListGroup>
@@ -70,7 +76,7 @@ const ProductScreen = () => {
             </Col>
           </Row>
         </>
-      );
-    };
-    
-    export default ProductScreen;
+    );
+};
+
+export default ProductScreen;
