@@ -1,120 +1,79 @@
+const products = [
+  {
+    name: 'Airpods Wireless Bluetooth Headphones',
+    image: '/images/airpods.jpg',
+    description:
+      'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
+    brand: 'Apple',
+    category: 'Electronics',
+    price: 89.99,
+    countInStock: 10,
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    name: 'iPhone 13 Pro 256GB Memory',
+    image: '/images/phone.jpg',
+    description:
+      'Introducing the iPhone 13 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life',
+    brand: 'Apple',
+    category: 'Electronics',
+    price: 599.99,
+    countInStock: 7,
+    rating: 4.0,
+    numReviews: 8,
+  },
+  {
+    name: 'Cannon EOS 80D DSLR Camera',
+    image: '/images/camera.jpg',
+    description:
+      'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
+    brand: 'Cannon',
+    category: 'Electronics',
+    price: 929.99,
+    countInStock: 5,
+    rating: 3,
+    numReviews: 12,
+  },
+  {
+    name: 'Sony Playstation 5',
+    image: '/images/playstation.jpg',
+    description:
+      'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
+    brand: 'Sony',
+    category: 'Electronics',
+    price: 399.99,
+    countInStock: 11,
+    rating: 5,
+    numReviews: 12,
+  },
+  {
+    name: 'Logitech G-Series Gaming Mouse',
+    image: '/images/mouse.jpg',
+    description:
+      'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
+    brand: 'Logitech',
+    category: 'Electronics',
+    price: 49.99,
+    countInStock: 7,
+    rating: 3.5,
+    numReviews: 10,
+  },
+  {
+    name: 'Amazon Echo Dot 3rd Generation',
+    image: '/images/alexa.jpg',
+    description:
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+    brand: 'Amazon',
+    category: 'Electronics',
+    price: 29.99,
+    countInStock: 0,
+    rating: 4,
+    numReviews: 12,
+  },
+];
 
-const products =
-
-[
-    {
-      "id": 1,
-      "name": "Alexa",
-      "description": "Smart virtual assistant by Amazon for voice-controlled device management.",
-      "price": 99.99,
-      "category": "Smart Home",
-      "image": "/images/alexa.png",
-      "countInStock": 25,
-      "rating": 4.5,
-      "numReviews": 102
-    },
-    {
-      "id": 2,
-      "name": "AirPods",
-      "description": "Wireless earbuds by Apple offering high-quality sound and ease of use.",
-      "price": 199.99,
-      "category": "Audio",
-      "image": "/images/airpods.png",
-      "countInStock": 50,
-      "rating": 4.8,
-      "numReviews": 250
-    },
-    {
-      "id": 3,
-      "name": "Smartphone",
-      "description": "Smartphone combining a high-resolution camera, internet browsing, and various apps.",
-      "price": 599.99,
-      "category": "Mobile",
-      "image": "/images/smartphone.png",
-      "countInStock": 30,
-      "rating": 4.3,
-      "numReviews": 180
-    },
-    {
-      "id": 4,
-      "name": "Smart TV",
-      "description": "Internet-connected television with access to streaming services and additional apps.",
-      "price": 799.99,
-      "category": "Home Entertainment",
-      "image": "/images/smart_tv.png",
-      "countInStock": 15,
-      "rating": 4.7,
-      "numReviews": 95
-    },
-    {
-      "id": 5,
-      "name": "Smart Watch",
-      "description": "Watch with health monitoring, notifications display, and additional functions.",
-      "price": 149.99,
-      "category": "Wearables",
-      "image": "/images/smart_watch.png",
-      "countInStock": 40,
-      "rating": 4.6,
-      "numReviews": 220
-    },
-    {
-      "id": 6,
-      "name": "Security Camera",
-      "description": "Camera designed for monitoring and recording events for security purposes.",
-      "price": 129.99,
-      "category": "Security",
-      "image": "/images/securityCam.png",
-      "countInStock": 20,
-      "rating": 4.4,
-      "numReviews": 80
-    },
-    {
-      "id": 7,
-      "name": "Bluetooth Speaker",
-      "description": "Wireless speaker that connects to other devices via Bluetooth technology.",
-      "price": 59.99,
-      "category": "Audio",
-      "image": "/images/bluetoothRamkol.png",
-      "countInStock": 60,
-      "rating": 4.2,
-      "numReviews": 150
-    },
-    {
-      "id": 8,
-      "name": "Wireless Charger",
-      "description": "Charger that allows wire-free charging for compatible devices.",
-      "price": 39.99,
-      "category": "Accessories",
-      "image": "/images/wireless_charger.png",
-      "countInStock": 75,
-      "rating": 4.1,
-      "numReviews": 60
-    },
-    {
-      "id": 9,
-      "name": "Laptop",
-      "description": "Compact, portable computer allowing work from anywhere.",
-      "price": 899.99,
-      "category": "Computers",
-      "image": "/images/pc.png",
-      "countInStock": 10,
-      "rating": 4.9,
-      "numReviews": 340
-    },
-    {
-      "id": 10,
-      "name": "Soundbar",
-      "description": "Speaker installed below the TV to enhance sound quality.",
-      "price": 199.99,
-      "category": "Home Entertainment",
-      "image": "images/soundbar.png",
-      "countInStock": 18,
-      "rating": 4.6,
-      "numReviews": 90
-    }
-  ]
-
-  export default products;
+export default products;
   
   
   

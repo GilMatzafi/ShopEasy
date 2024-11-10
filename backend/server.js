@@ -2,7 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 import connecDB from './config/db.js';
-import products from './data/products.js';
+import ProductRoutes from './routes/productRoutes.js';
+
 const port = process.env.PORT || 5001;
 
 connecDB(); 
@@ -13,20 +14,11 @@ app.get('/', (req, res) => {
   res.send('Api is running!');
 } );      
 
-app.get('/api/products', (req, res) => {
-  res.json(products);
-} );
-
-app.get('/api/products/:id', (req, res) => {
-  const product = products.find((p) => p.id === Number(req.params.id)); // Convert req.params.id to a number
-  if (product) {
-    res.json(product);
-  } else {
-    res.status(404).json({ message: 'Product not found' });
-  }
-});
+app.use('/api/products', ProductRoutes);
 
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-} );
+
+
+app.listen(port, () =>
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`)
+);
