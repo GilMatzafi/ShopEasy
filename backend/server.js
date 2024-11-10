@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import connecDB from './config/db.js';
 import ProductRoutes from './routes/productRoutes.js';
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 const port = process.env.PORT || 5001;
 
@@ -16,6 +17,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', ProductRoutes);
 
+app.use(notFound);
+app.use(errorHandler);
 
 
 
