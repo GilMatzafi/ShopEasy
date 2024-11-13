@@ -3,6 +3,7 @@ import { Carousel, Image } from 'react-bootstrap';
 import Loader from './Loader';
 import Message from './Message';
 import { useGetTopProductsQuery } from '../slices/productApiSlice';
+import '../assets/styles/ProductCarousel.css';
 const ProductCarousel = () => {
   const { data: products, isLoading, error } = useGetTopProductsQuery();
   return isLoading ? (

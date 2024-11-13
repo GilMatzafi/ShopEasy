@@ -64,18 +64,33 @@
   }
   
 
-  .latest-products-title {
-    position: relative;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+/* Latest Products Title Styling */
+.latest-products-title {
+  position: relative;
+  font-size: 2.5rem; /* Slightly larger for emphasis */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif; /* Clean and modern font */
+  color: #2C3E50; /* Darker shade for readability */
+  margin-bottom: 30px; /* Increased spacing */
+  text-align: center;
+  text-transform: uppercase; /* Optional: gives a clear, structured look */
+  letter-spacing: 1px; /* Adds a modern feel with spacing between letters */
+}
   
-  .latest-products-title:after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #007bff;
-    margin: 10px auto 0;
-  }
+/* Add a subtle underline effect */
+.latest-products-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Underline width */
+  height: 3px; /* Underline thickness */
+  background-color: #2980B9; /* Matches color theme */
+  border-radius: 5px; /* Smooths the line edges */
+}
+
+/* Optional hover effect */
+.latest-products-title:hover {
+  color: #1A5276; /* Slight color change on hover */
+}

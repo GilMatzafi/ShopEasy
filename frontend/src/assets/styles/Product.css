@@ -1,48 +1,116 @@
-/* Product.css */
-
+/* General card styling */
 .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-img-top {
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Lora', serif; /* Elegant font for card */
+}
 
-  .product-title {
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 10px;
-    text-decoration: none;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image styling */
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow behind image */
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); /* Slight zoom on image when hovering over card */
+}
+
+/* Product title styling */
+.product-title {
+  color: #2C3E50;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: 'Playfair Display', serif; /* Elegant title font */
+}
+
+.product-title:hover {
+  color: #2980B9;
+  text-decoration: underline;
+}
+
+/* Card title styling (for consistency) */
+.card-title {
+  font-size: 1.1rem;
+  color: #2C3E50;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Price styling */
+.card-text h3 {
+  color: #2980B9;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 20px; /* Add space between review and price */
+  background-color: #f7f7f7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif; /* Modern font for price */
+  transition: color 0.3s ease;
+}
+
+/* Add subtle hover color change to price */
+.card-text h3:hover {
+  color: #1A5276;
+}
+
+/* Rating styling */
+.rating {
+  color: #F39C12; /* Elegant gold color for rating stars */
+  font-size: 1.0rem;
+  margin-top: 5px;
+  transition: transform 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.rating:hover {
+  transform: scale(1.1); /* Slight pop effect on hover */
+}
+
+/* Product reviews count */
+.card-text .review-text {
+  color: #7F8C8D; /* Softer color for review text */
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* Adding padding and layout improvements */
+.card-body {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Additional styling for smaller screens */
+@media (max-width: 768px) {
+  .card {
+      margin: 10px 0;
   }
-  
-  .product-title:hover {
-    color: #007bff;
-    text-decoration: underline;
-  }
-  
-  .card-title {
-    color: #333;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .card-text h3 {
-    color: #007bff;
-    font-weight: bold;
-  }
-  
-  .rating {
-    color: #ffc107;
-    font-size: 0.9rem;
-  }
+}
+
+
+
   
