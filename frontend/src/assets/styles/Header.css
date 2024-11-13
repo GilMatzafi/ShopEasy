@@ -1,12 +1,59 @@
-/* Header.css */
-
+/* Style for the main navbar */
 .navbar-custom {
-    background: linear-gradient(to right, #4b6cb7, #182848);
-  }
-  
-  .navbar-brand-custom {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
+  background-color: #343a40; /* צבע כהה מותאם */
+  padding: 1rem;
+}
+
+.navbar-brand-custom {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Style for cart button */
+.nav-link {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.navbar-nav .cart-badge {
+  background-color: #ff6347; /* צבע רקע כתום */
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* Style for search box */
+.search-box {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+}
+
+.search-box input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* Style for Sign In link */
+.navbar-nav .sign-in-link {
+  color: #28a745; /* צבע ירוק */
+  font-weight: bold;
+}
+
+.navbar-nav .sign-in-link:hover {
+  color: #218838;
+}
+
+/* Style for admin dropdown */
+.navbar-nav .admin-menu {
+  color: #007bff;
+  font-weight: bold;
+}

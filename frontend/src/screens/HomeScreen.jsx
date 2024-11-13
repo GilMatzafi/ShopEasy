@@ -7,6 +7,8 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Paginate from "../components/Paginate";
 import ProductCarousel from "../components/ProductCarousel";
+import '../assets/styles/HomeScreen.css';
+
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -19,7 +21,7 @@ const HomeScreen = () => {
       {!keyword ? (
         <ProductCarousel />
       ) : (
-        <Link to="/" className="btn btn-light">
+        <Link to="/" className="btn btn-light go-back-btn"> {/* הוספת className לכפתור חזרה */}
           Go Back
         </Link>
       )}
@@ -31,11 +33,11 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
-          <h1>Latest Products</h1>
+          <h1 className="latest-products-title">Latest Products</h1> {/* הוספת className לכותרת */}
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                <Product product={product} />
+                <Product product={product} className="product-card" /> {/* הוספת className לכרטיס מוצר */}
               </Col>
             ))}
           </Row>
