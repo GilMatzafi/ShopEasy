@@ -41,7 +41,7 @@ Below are some screenshots showcasing different features of **ShopEasy** eCommer
 
 - **Admin Page Products** : The Admin can add and delete products
 
-![AdminPage](screenshots/AdmingPage.png)
+![AdminPage](screenshots/AdminPage.png)
 
 - **Admin Page Users** : The Admin can control all of the users !
 
